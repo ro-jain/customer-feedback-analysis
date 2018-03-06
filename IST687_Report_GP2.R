@@ -1,7 +1,3 @@
-#IST 687 - Applied Data Science
-#Final Project : Hyatt NPS Data
-#Akshay K., Rohit A., Rohit J., Santhosh N. 
-
 ############################################################################
                                   #Part 1#
 ###########################################################################
@@ -18,7 +14,7 @@ library(zipcode)
 #----------------------------------------------------------------------#
 
 #---------------------Loading Data------------------------------------#
-setwd("C:/Users/rohit/Desktop/IST687/Project")
+setwd("#enter location of the file#")
 dummy<-c(169,111,110,71,145)                                      
 dummy<-dummy-1
 SurveyData<-fread("out-201412.csv", sep = ",",select = c(dummy))
