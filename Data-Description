@@ -1,0 +1,241 @@
+# Data Description. 
+copy the entire file to excel for a better understanding.
+
+Column Name	Definition
+CHECKOUT_HEADER_ID_C	System generated number that identifies a unique check out event
+MARKET_CODE_C	Hyatt standard market code
+MARKET_DESC_C	Description of market code
+MARKET_GROUP_C	Sub-group of major markets
+MAJOR_MARKET_CODE_C	Major market valid values: Convention (Group), Transient, or Contract
+CHANNEL_CODE_C	Hyatt standard character distribution channel code
+RATE_PLAN_C	Hyatt standard character rate plan code combined with DPS for OPERA hotels
+SPLIT_RATE_PLAN_C	Hyatt standard character rate plan code (no DPS)
+CONS_GUEST_ID_C	System generated number that identifies a customer profile; this is generated in MDM/GEM
+ROOM_NUM_C	Hotel room number
+ROOM_TYPE_CODE_C	Hyatt standard room type code of the guest's room upon checkout
+ROOM_TYPE_DESCRIPTION_C	Room type description (specific to the property) of the guest's room upon checkout
+WALK_IN_FLG_C	Flag indicating a walk-in
+RESERVATION_CONFIRMATION_NUM_C	Guest's confirmation number derived from Reservation table; can repeat
+RESERVATION_CONFIRMATION_PAGE_C	Guest's confirmation page derived from Reservation table
+RESERVATION_STATUS_C	Reservation status business name. Valid values for completed stay are: checked out, no show, walk, and cancelled
+CHECK_IN_DATE_C	Check in date; for WALK status adjusted to the first in-house stay date
+CHECK_OUT_DATE_C	Check out date
+LENGTH_OF_STAY_C	Length of stay
+NUMBER_OF_ROOMS_C	Number of rooms occupied. Valid values are 0 or 1; for checked out stayed, 0 indicates shared stay or pseudo room type
+ADULT_NUM_C	Number of adults on the last day of the stay
+CHILDREN_NUM_C	Number of children on the last day of the stay
+POV_CODE_C	Purpose of visit
+QUOTED_RATE_C	Quoted rate derived from Reservation table
+PMS_ROOM_REV_C	Room revenue from the PMS in hotel's local currency
+PMS_ROOM_REV_USD_C	Room revenue from the PMS in USD
+PMS_TOTAL_REV_C	Total from the PMS in hotel's local currency
+PMS_TOTAL_REV_USD_C	Total from the PMS in USD
+PMS_FOOD_BEVERAGE_REV_C	F&B revenue from the PMS in hotel's local currency
+PMS_FOOD_BEVERAGE_REV_USD_C	F&B revenue from the PMS in USD
+PMS_OTHER_REV_C	Other revenue from the PMS in hotel's local currency
+PMS_OTHER_REV_USD_C	Other revenue from the PMS in USD
+WALK_FLAG_C	Set to 'Y' if at least one day of the stay was a walk
+NO_SHOW_FLAG_C	Set to 'Y' if at least one day of the stay was a no show
+DUP_INDEX_C	Number indicating whether a confirmation number is unique
+CONFIRMATION_NUM_R	The confirmation number provided to the individual or account by the reservation clerk at the time of booking
+CONFIRMATION_PAGE_R	Part of the primary key for a reservation. A new reservation page could be created if there are different rates during the reservation or different people are entered on the reservation a new page is created.
+RESERVATION_DATE_R	Date when the booking was made
+ARRIVAL_FLG_R	A flag to denote whether the guest has arrived or not; 1 indicates arrived, 0 indicates not arrived
+ARRIVAL_DATE_R	Check in date
+DEPARTURE_DATE_R	Check out date
+DIRECT_NIGHTS_NUM_R	Total number of nights associated with the reservation
+RESERVATION_STATUS_R	Reservation status; valid values: CONFRM, SHARE, CANCEL
+ENTRY_TIME_R	Time the reservation was made
+ENTRY_HOTEL_CODE_R	Entry hotel code
+LAST_CHANGE_DATE_R	Date of last change to the reservation
+ROOM_TYPE_CODE_R	Hyatt standard room type code of the guest's room as per the booking
+ROOM_TYPE_DESCRIPTION_R	Room type description (specific to the property) of the guest's room as per the booking
+MAJOR_MARKET_CODE_R	Major market valid values: Convention (Group), Transient, or Contract
+PMS_RATE_CATEGORY_CODE_R	Total room revenue rate category code
+NUM_ROOMS_R	Total number of rooms booked under the reservation
+ADULT_NUM_R	Number of adults for which the reservation was made
+CHILDREN_NUM_R	Number of children associated with the reservation
+NT_RATE_R	Nightly rate
+STATE_R	State of the party making the reservation
+COUNTRY_CODE_R	Country of the party making the reservation
+ETA_R	Estimated time of arrival of the guest
+FLIGHTT_INFO_R	Airline/flight number of the guest arriving at the hotel
+LENGTH_OF_STAY_R	Total length of stay (calculated as Departure Date minus Arrival Date) represented in days
+LENGTH_OF_STAY_CATEGORY_R	Category of length of stay
+CALCULATED_NIGHTS_NUM_R	Total number of nights calculated from what's provided by the source
+ROOM_NIGHTS_R	Actual number of nights provided by the source
+STATUS_CALCULATION_R	A calculated status based on reservation_status field. Valid values are confirmed or cancelled
+GROUPS_VS_FIT_R	FIT (Free Independent Travel) vs. Group Travel. FIT individuals travel in which a tour operator has previously arranged blocks of rooms at various destinations in advance for use by individual travelers. These travelers travel independently, not in a group, usually by rental car or public transportation.
+GUEST_COUNTRY_R	The country to which the actual guest belongs to. Different from Country_Code
+GOLDPASSPORT_FLG_R	Identifies if the reservation is for a GP member
+MEMBER_STATUS_R	Tier of the GP program that the member belongs
+PACE_CATEGORY_R	Categorizes the number of nights in the future the reservation was made
+PACE_R	Pace identifies the number of nights in the future the reservation was made
+OFFER_FLG_R	Offer flag identifies if an offer was used on the reservation
+PAST_VS_FUTURE_R	Past versus future
+REVENUE_R	Total revenue from the reservation in hotel's local currency
+REVENUE_USD_R	Total revenue from the reservation in USD
+CHANNEL_CODE_R	Distribution channel code
+e_delivereddate_I	Datetime when the survey invitation was delivered to the guest
+e_delivereddate_adj_I	Datetime when the survey invitation was delivered to the guest (adjusted depending on guest's suspected origin time zone)
+e_status_I	Status of the survey
+e_hy_gss_tier_I	GP tier of the guest
+e_hy_gss_conf_num_I	Guest's confirmation number
+e_hy_gss_conf_page_I	Guest's confirmation page
+e_hy_feedback_type_I	Indicates type of survey received by guest (short vs. long)
+e_hy_gss_rate_plan_code_I	Rate plan code
+e_country_I	Guest's country
+e_hy_gss_check_in_by_I	Agent that checked the guest in
+e_hy_gss_check_out_by_I	Agent that checked the guest out
+e_hy_gss_marketing_emails_ok_yn_I	Flag indicating if the guest is okay with receiving marketing emails
+e_hy_gss_promo_emails_ok_yn_I	Flag indicating if the guest is okay with receiving promotional emails
+e_hy_gss_club_access_yn_I	Flag indicating if the guest accessed the club
+e_hy_gss_gender_I	Guest's gender
+e_hy_gss_title_text_I	Guest's title
+e_hy_gss_language_I	Guest's preferred language
+e_hy_gss_room_floor_I	Floor at which the guest stays
+e_hy_gss_check_in_time_text_I	Check in time of the guest (string)
+e_hy_gss_check_out_time_text_I	Check out time of the guest (string)
+e_hy_gss_check_in_time_I	Check in time of the guest
+e_hy_gss_check_out_time_I	Check out time of the guest
+e_checkin_I	Check in date
+e_checkout_I	Check out date
+a_last_seen_page_name_I	Page last seen by the guest
+a_last_submitted_page_name_I	Page last submitted by guest
+Survey_ID_H	Unique identifier for a completed HySat survey
+Response_Date_H	Date when survey was completed
+Guest_Checkin_Date_H	Check in date
+Guest_Checkout_Date_H	Check out date
+Length_Stay_H	Length of stay
+Guest_State_H	Guest's state
+Guest_Country_H	Guest's country
+Gender_H	Guest's gender
+Age_Range_H	Guest's age range
+POV_H	Guest's purpose of visit
+Language_H	The language that the survey was taken in
+DOE_H	
+Booking_Location_H	Hotel entry code
+Num_Adults_H	Number of adults associated with the stay
+Num_Kids_H	Number of kids associated with the stay
+Num_Rooms_H	Number of rooms associated with the stay
+Conf_Num_Orig_H	Guest's confirmation number and page (concatenated)
+Conf_Num_H	Guest's confirmation number
+Conf_Page_H	Guest's confirmation page
+Rate_Plan_H	Rate plan code
+Gross_Rev_H	Gross revenue
+Net_Rev_H	Net revenue
+Room_Rev_H	Room revenue
+CC_Type_H	Credit card type
+Currency_H	Hotel's currency
+Clublounge_Used_H	Flag indicating if the club lounge was used by the guest
+Spa_Used_H	Flag indicating if the spa was used by the guest
+GDS_Source_H	GDS source
+Checkin_Length_H	Check in length
+Room_Num_H	Guest's room number
+Room_Type_H	Guest's room type code
+GP_Tier_H	GP tier of the guest
+Status_H	Status of the survey
+Feedback_Type_H	Type of the survey taken (short vs. long)
+Mobile_First_H	Flag indicating whether the guest first opened the survey on a mobile device
+Mobile_H	Flag indicating whether the guest took the survey on a mobile device
+Likelihood_Recommend_H	Likelihood to recommend metric; value on a 1 to 10 scale
+Overall_Sat_H	Overall satisfaction metric; value on a 1 to 10 scale
+Guest_Room_H	Guest room satisfaction metric; value on a 1 to 10 scale
+Tranquility_H	Tranquility metric; value on a 1 to 10 scale
+Condition_Hotel_H	Condition of hotel metric; value on a 1 to 10 scale
+Customer_SVC_H	Quality of customer service metric; value on a 1 to 10 scale
+Staff_Cared_H	Staff cared metric; value on a 1 to 10 scale
+Internet_Sat_H	Internet satisfaction metric; value on a 1 to 10 scale
+Check_In_H	Quality of the check in process metric; value on a 1 to 10 scale
+F&B_FREQ_H	Number of times guest visited an F&B outlet in the hotel
+F&B_Overall_Experience_H	Overal F&B experience metric; value on a 1 to 10 scale
+Internet_Dissat_Lobby_H	Detailed questions about the available internet
+Internet_Dissat_Slow_H	Detailed questions about the available internet
+Internet_Dissat_Expensive_H	Detailed questions about the available internet
+Internet_Dissat_Connectivity_H	Detailed questions about the available internet
+Internet_Dissat_Billing_H	Detailed questions about the available internet
+Internet_Dissat_Wired_H	Detailed questions about the available internet
+Internet_Dissat_Other_H	Detailed questions about the available internet
+TV_Internet_General_H	Detailed questions about the available internet
+Room_Dissat_Internet_H	Detailed questions about the available internet
+eff_date_CC	Date of check in
+avail_room_cnt_CC	Total rooms available count on eff_date
+occ_room_cnt_CC	Total occupied rooms count on eff_date
+average_daily_rate_CC	Average daily rate on eff_date
+Spirit_PL	Unique hotel identifier (5-letter code)
+Property_ID_PL	Unique hotel identifier (numeric)
+Hotel Name-Long_PL	Full hotel name
+Hotel Name-Short_PL	Abbreviated hotel name
+Award Category_PL	Gold Passport award redemption category
+Status_PL	Status of the hotel. Valid values: open, closed, pipeline, pre-opening
+City_PL	City in which the hotel is located
+State_PL	State in which the hotel is located
+US Region_PL	US region in which the hotel is located
+Postal Code_PL	Zip code in which the hotel is located
+Country_PL	Country in which the hotel is located
+Ops Region_PL	Operations region. Valid values: Americas, EMEA, ASPAC
+Sub-Continent_PL	Sub-continent in which the hotel is located
+Property DMA_PL	DMA in which the hotel is located
+Property Latitude_PL	Latitude of the hotel's location
+Property Longitude_PL	Longitude of the hotel's location
+Currency_PL	Local currency for hotel
+Dom Int'l_PL	Valid values: Domestic or International
+Guest NPS Goal_PL	Hotel's NPS goals
+STR Number_PL	Unique identifier for STR
+STR Market_PL	STR market to which the hotel belongs
+Brand_PL	Hotel's brand
+Brand Initial_PL	Hotel's brand abbreviated
+Club Type_PL	Available club type 
+Hotel Inventory_PL	Size of hotel (number of rooms)
+Floors_PL	Number of floors
+Total Meeting Space_PL	Total meeting space available
+Union_PL	Flag indicating if the hotel has unionized workers
+G#Region_PL	Hotel's region as per the GSS table
+D#Region_PL	Hotel's region as per the Development table
+Region_PL	Region
+Category_PL	Category
+Scope of Service_PL	Scope of service
+Type_PL	Type
+Class_PL	Class
+Location_PL	Location
+Bucket_PL	Bucket
+Relationship_PL	Relationship of the hotel with Hyatt Corporation
+All Suites_PL	Flag indicating if the hotel is all suites
+Bell Staff_PL	Flag indicating if the hotel has bell staff
+Boutique_PL	Flag indicating if the hotel is boutique
+Business Center_PL	Flag indicating if the hotel has a business center
+Casino_PL	Flag indicating if the hotel has a casino
+Conference_PL	Flag indicating if the hotel has a conference center nearby
+Convention_PL	Flag indicating if the hotel has convention space
+Dry-Cleaning_PL	Flag indicating if the hotel has dry-cleaning
+Elevators_PL	Flag indicating if the hotel has elevators
+Fitness Center_PL	Flag indicating if the hotel has a fitness center
+Fitness Trainer_PL	Flag indicating if the hotel has fitness trainers
+Golf_PL	Flag indicating if the hotel is near a golf space
+Indoor Corridors_PL	Flag indicating if the hotel has indoor corridors
+Laundry_PL	Flag indicating if the hotel has laundry space
+Limo Service_PL	Flag indicating if the hotel has limo service
+Mini-Bar_PL	Flag indicating if the hotel has mini-bar
+Pool-Indoor_PL	Flag indicating if the hotel has an indoor poo
+Pool-Outdoor_PL	Flag indicating if the hotel has an outdoor pool
+Regency Grand Club_PL	Flag indicating if the hotel has a regency grand club
+Resort_PL	Flag indicating if the hotel is a resort
+Restaurant_PL	Flag indicating if the hotel has onsite restaurants
+Self-Parking_PL	Flag indicating if the hotel has self-parking
+Shuttle Service_PL	Flag indicating if the hotel has shuttle service
+Ski_PL	Flag indicating if the hotel is near ski space
+Spa_PL	Flag indicating if the hotel has a spa
+Spa services in fitness center_PL	Flag indicating if the hotel has spa services in the fitness center
+Spa online booking_PL	Flag indicating if the hotel provides spa online booking
+Spa F&B offering_PL	Flag indicating if the hotel has spa F&B offering
+Valet Parking_PL	Flag indicating if the hotel has valet parking
+GP_Tier	GP tier of the guest, coalesced from multiple sources (Reservation, Invitation, HySat)
+Sub_Channel_Category	Sub channel category for booking channel
+Channel_Category	Channel category for booking channel
+Booking_Channel	Defined booking channel as per the NPS analysis
+NPS_Type	Indicates if the guest's HySat responses mark them as a promoter, a passive, or a detractor
+Stay_Sequence	Sequence of a GP member's stays in chronological order with Hyatt regardless or brand
+Stay_Sequence_Brand	Sequence of a GP member's stays in chronological order within each of Hyatt's different brands
+Completed_Survey_Sequence	Sequence of a GP member's completed HySat surveys in chronological order
+Days_Since_Last_Stay	Days since last stay for a GP member's current stay (Arrival date of current stay minus the departure date of the previous stay)
+Days_Until_Next_Stay	Days until next stay for a GP member's current stay (Arrival date of next stay mins the departure date of the current stay)
